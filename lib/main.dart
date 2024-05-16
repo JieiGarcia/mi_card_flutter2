@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Container(
-            height: 1000,
-            margin: EdgeInsets.symmetric(vertical: 100, horizontal: 100),
-            width: 400,
+            height: 200,
+            margin: EdgeInsets.only(left: 50, top: 50),
+            padding: EdgeInsets.all(80.0),
+            width: 200,
             color: Colors.white,
             child: Text("meow meow"),
           ),
