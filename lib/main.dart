@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
@@ -15,34 +15,24 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.red,
-              ),
-              Column(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
+                  CircleAvatar(
+                    backgroundImage: AssetImage("image/profile.jpg"),
+                    radius: 50,
                   ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                  )
                 ],
               ),
+              Text(data),
               Container(
-                width: 100.0,
-                height: double.infinity,
                 color: Colors.blue,
-              ),
+                width: 200,
+                height: 50,
+              )
             ],
           ),
         ),
