@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 backgroundImage: AssetImage("image/profile.jpg"),
@@ -37,59 +38,50 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 4,
                     fontWeight: FontWeight.bold),
               ),
-              Container(
-                color: Colors.white,
+              SizedBox(
+                child: Divider(
+                  color: Colors.teal.shade300,
+                ),
+                width: 200,
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone_android,
-                      color: Colors.teal,
-                      size: 20,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone_android,
+                    color: Colors.teal,
+                    size: 20,
+                  ),
+                  title: Text(
+                    '+81 08098885522',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'SourceSans3',
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+81 08098885522',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'SourceSans3',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
+              Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'Jiei.flutter@gmail.com',
                       style: TextStyle(
                           fontFamily: 'SourceSans3',
                           fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              )
+                    ),
+                  ))
             ],
           ),
         ),
